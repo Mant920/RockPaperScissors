@@ -1,3 +1,6 @@
+//declaring global variables
+let humanScore = 0, computerScore = 0;
+
 //Creating random number generator
 function genRandom()
 {
