@@ -28,7 +28,8 @@ function getHumanChoice()
 {
     //Getting user input
     let choice = prompt("Rock, Paper or Scissors?Pick one.");
-    return choice.toLowerCase();
+    choice=choice.toLowerCase()
+    return choice;
 
 }
 
@@ -71,7 +72,7 @@ function playRound(humanChoice, computerChoice)
         }
         else if(humanChoice==="paper")
         {
-            message="You lose, Paper beats Rock !";
+            message="You win, Paper beats Rock !";
         }
         
     }
@@ -79,7 +80,13 @@ function playRound(humanChoice, computerChoice)
     {
         message="It's a draw!";
     }
+    console.log(message);
     return message;
 
 }
 
+for(i = 0;i < 5;i++)
+{
+    result=playRound(getHumanChoice(),getComputerChoice());
+    console.log("user score: "+humanScore+", computer score: "+computerScore);
+}
