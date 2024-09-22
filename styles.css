@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    justify-content: center;
+    background-color:#697565;
+    padding: 45px;
+    margin-bottom: 5px;
+
+}
+h1{
+    color: white;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color:#ECDFCC;
+    padding: 50px;
+}
+.btn{
+    border-radius: 12px;
+    border: 5px solid white;
+    padding: 20px;
+    background-color:#F7F7F8;
+
+}
