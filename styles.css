@@ -11,6 +11,9 @@
 .first{
     display: flex;
 }
+.second{
+    margin-top: 0px;
+}
 h1{
     color: white;
 }
