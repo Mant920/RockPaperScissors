@@ -85,8 +85,4 @@ function playRound(humanChoice, computerChoice)
 
 }
 
-for(i = 0;i < 5;i++)
-{
-    result=playRound(getHumanChoice(),getComputerChoice());
-    console.log("user score: "+humanScore+", computer score: "+computerScore);
-}
+
