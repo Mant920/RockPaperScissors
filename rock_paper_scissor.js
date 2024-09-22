@@ -1,3 +1,15 @@
+
+//Creating buttons
+const btn1=document.createElement("button");
+const btn2=document.createElement("button");
+const btn3=document.createElement("button");
+
+//Setting button text
+btn1.textContent="Rock";
+btn2.textContent="Paper";
+btn3.textContent="Scissors";
+
+
 //declaring global variables
 let humanScore = 0, computerScore = 0;
 
@@ -24,14 +36,6 @@ function getComputerChoice()
     }
 }
 
-function getHumanChoice()
-{
-    //Getting user input
-    let choice = prompt("Rock, Paper or Scissors?Pick one.");
-    choice=choice.toLowerCase()
-    return choice;
-
-}
 
 function playRound(humanChoice, computerChoice)
 {
