@@ -1,10 +1,15 @@
 .header{
     display: flex;
-    justify-content: center;
+
+    align-items: center;
+    flex-direction: column;
     background-color:#697565;
     padding: 45px;
     margin-bottom: 5px;
 
+}
+.first{
+    display: flex;
 }
 h1{
     color: white;
