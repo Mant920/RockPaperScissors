@@ -33,6 +33,7 @@ h1{
     gap: 50px;
     background-color:#98DED9;
     padding: 50px;
+    margin-bottom: 5px;
 }
 .btn{
     border-radius: 12px;
@@ -40,4 +41,9 @@ h1{
     background-color: gold;
     padding: 20px;
 
+}
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
 }
