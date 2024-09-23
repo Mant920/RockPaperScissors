@@ -3,16 +3,24 @@
 
     align-items: center;
     flex-direction: column;
-    background-color:#697565;
+    background-color:#161D6F;
     padding: 45px;
     margin-bottom: 5px;
 
+}
+p{
+    color: white;
 }
 .first{
     display: flex;
 }
 .second{
     margin-top: 0px;
+}
+#result{
+    background-color: #0B2F9F;
+    padding: 50px;
+    margin-bottom: 5px;
 }
 h1{
     color: white;
@@ -23,13 +31,13 @@ h1{
     display: flex;
     justify-content: center;
     gap: 50px;
-    background-color:#ECDFCC;
+    background-color:#98DED9;
     padding: 50px;
 }
 .btn{
     border-radius: 12px;
     border: 5px solid white;
+    background-color: gold;
     padding: 20px;
-    background-color:#F7F7F8;
 
 }
