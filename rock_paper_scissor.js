@@ -1,17 +1,13 @@
+//buttons
+const buttons=document.querySelectorAll("button");
 
-//Creating buttons
-const btn1=document.createElement("button");
-const btn2=document.createElement("button");
-const btn3=document.createElement("button");
-
-//Setting button text
-btn1.textContent="Rock";
-btn2.textContent="Paper";
-btn3.textContent="Scissors";
+const output=document.querySelector("#result");
+let content=document.createElement("p");
 
 
 //declaring global variables
 let humanScore = 0, computerScore = 0;
+const MAXIMUM_POINTS = 5;
 
 //Creating random number generator
 function genRandom()
@@ -32,61 +28,94 @@ function getComputerChoice()
     }
     else
     {
-        return "scissors";
+        return "scissor";
     }
 }
 
 
-function playRound(humanChoice, computerChoice)
+function playRound(button,computerChoice)
 {
     
     let message=" ";
+    
+        if((button==1 &&computerChoice=="paper")||(button==1&&computerChoice=="scissor"))
+        {
+        
+            if(computerChoice=="paper")
+            {
+                message="You lose, Paper beats Rock!";
+                computerScore+=1;
 
-    if((humanChoice==="rock" && computerChoice==="paper") || (humanChoice==="scissors" && computerChoice==="rock") || (humanChoice==="paper" && computerChoice==="scissors"))
-    {
-        
-
-        //Incrementing computer score
-        computerScore+=1;
-        if(humanChoice==="rock")
-        {
-            message="You lose, Paper beats Rock!";
+            }
+            else if(computerChoice=="scissor")
+            {
+                message="You win, Rock beats Scissor!";
+                //Incrementing human score
+                humanScore+=1;
+            }
+            
+            
         }
-        else if(humanChoice==="scissors")
+        else if((button==2 &&computerChoice=="rock")||(button==2 && computerChoice=="scissor"))
         {
-            message="You lose, Rock beats Scissors!";
+            
+                if(computerChoice=="rock")
+                {
+                    message="You win, Paper beats Rock!";
+                    humanScore+=1;
+                }
+                else if(computerChoice=="scissor")
+                {
+                    message="You lose, Scissor beats Paper !";
+                    //Incrementing computer score
+                    computerScore+=1;
+                }
+                
+            
         }
-        else if(humanChoice==="paper")
+        else if((button==3 &&computerChoice=="rock")||(button==3 &&computerChoice=="paper"))
         {
-            message="You lose, Scissors beats Paper !";
+                if(computerChoice=="rock")
+                {
+                    message="You lose, Rock beats Scissor!";
+                    computerScore+=1;
+                }
+                else if(computerChoice=="paper")
+                {
+                    message="You win, Scissor beats Paper !";
+                    humanScore+=1;
+                }
         }
-        
-    }
-    else if((humanChoice==="paper" && computerChoice==="rock") || (humanChoice==="rock" && computerChoice==="scissors") || (humanChoice==="scissors" && computerChoice==="paper"))
-    {
-        //Incrementing human score
-        humanScore+=1;
-        if(humanChoice==="rock")
+        else
         {
-            message="You win, Rock beats Scissors!";
+            message="It's a draw!";
         }
-        else if(humanChoice==="scissors")
-        {
-            message="You win, Scissors beats Paper !";
-        }
-        else if(humanChoice==="paper")
-        {
-            message="You win, Paper beats Rock !";
-        }
-        
-    }
-    else
-    {
-        message="It's a draw!";
-    }
     console.log(message);
-    return message;
+    content.textContent = `Computer choice: `+computerChoice+`,    `+message+` Your score: `+humanScore+` Computer score: `+computerScore;
+    content.style.textAlign="center";
+    
+    if(humanScore==5)
+    {
+        content.textContent ="You Win! You scored 5 points first!";
+        humanScore=0;
+        computerScore=0;
+    }
+    else if(computerScore==5)
+    {
+        content.textContent ="You Lose! Computer scored 5 points first!";
+        humanScore=0;
+        computerScore=0;
+    }
+ 
 
 }
+output.appendChild(content);
 
+buttons.forEach((button)=>{
+    let btn =button.id;
+    button.addEventListener("click",()=>{
+        playRound(btn,getComputerChoice());
+        console.log(btn);
 
+    });
+});
