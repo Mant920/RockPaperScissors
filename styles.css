@@ -42,6 +42,19 @@ h1{
     padding: 20px;
 
 }
+button{
+    transition-duration: 0.3s;
+}
+button:hover{
+    background-color: red;
+    color: white;
+}
+button:active{
+    background-color: red;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 footer{
     background-color: black;
     display: flex;
