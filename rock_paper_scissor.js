@@ -91,7 +91,7 @@ function playRound(button,computerChoice)
             message="It's a draw!";
         }
     console.log(message);
-    content.textContent = `Computer choice: `+computerChoice+`,    `+message+` Your score: `+humanScore+` Computer score: `+computerScore;
+    content.textContent = `Computer choice: ${computerChoice}, ${message}, Your score: ${humanScore}, Computer score: ${computerScore}`;
     content.style.textAlign="center";
     
     if(humanScore==5)
