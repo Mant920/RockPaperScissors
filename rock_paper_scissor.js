@@ -96,13 +96,13 @@ function playRound(button,computerChoice)
     
     if(humanScore==5)
     {
-        content.innerHTML ="<b>You Win!</b><br>You scored 5 points first!";
+        content.innerHTML =`<b>You Win!</b><br>You scored 5 points first!`;
         humanScore=0;
         computerScore=0;
     }
     else if(computerScore==5)
     {
-        content.textContent ="<b>You Lose!</b>"+"<br>Computer scored 5 points first!";
+        content.innerHTML =`<b>You Lose!</b><br>Computer scored 5 points first!`;
         humanScore=0;
         computerScore=0;
     }
